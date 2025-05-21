@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import landingImage from '@/public/assets/images/landing.png';
+import { Button } from '@/shared/components/ui/button';
 
 const LANDING_TEXT = {
   title: 'FIT',
@@ -10,8 +11,8 @@ const LANDING_TEXT = {
   getStarted: 'Get Started',
 };
 
-const Header = () => (
-  <div className="absolute top-6 right-6 flex gap-4 text-sm">
+const LadingHeader = () => (
+  <div className="absolute top-6 right-6 flex gap-4">
     <Link href="/login">{LANDING_TEXT.login}</Link>
     <Link href="/signup">{LANDING_TEXT.signup}</Link>
   </div>
@@ -29,22 +30,22 @@ const LandingImage = () => (
   </div>
 );
 
-const GetStartedButton = () => (
-  <Link href="/home">
-    <div className="bg-white text-violet-600 font-semibold px-8 py-3 rounded-xl shadow-md hover:bg-gray-100 transition text-center">
+const LandingButton = () => (
+  <Link href="/match">
+    <Button variant="landing" size="xl" className="text-lg">
       {LANDING_TEXT.getStarted}
-    </div>
+    </Button>
   </Link>
 );
 
 export default function LandingPage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-violet-200 to-rose-200 text-white px-4">
-      <Header />
+      <LadingHeader />
       <LandingImage />
       <div className="text-3xl font-bold">{LANDING_TEXT.title}</div>
       <div className="text-3xl mb-6">{LANDING_TEXT.subtitle}</div>
-      <GetStartedButton />
+      <LandingButton />
     </main>
   );
 }
