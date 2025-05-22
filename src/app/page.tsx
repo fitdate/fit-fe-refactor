@@ -12,14 +12,14 @@ const LANDING_TEXT = {
 };
 
 const LadingHeader = () => (
-  <div className="absolute top-6 right-6 flex gap-4">
+  <div className="absolute right-6 top-6 flex gap-4">
     <Link href="/login">{LANDING_TEXT.login}</Link>
     <Link href="/signup">{LANDING_TEXT.signup}</Link>
   </div>
 );
 
 const LandingImage = () => (
-  <div className="max-w-md w-full mt-20 mb-10">
+  <div className="mb-10 mt-20 w-full max-w-md">
     <Image
       src={landingImage}
       alt="남녀 소개팅 일러스트"
@@ -40,11 +40,11 @@ const LandingButton = () => (
 
 export default function LandingPage() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-violet-200 to-rose-200 text-white px-4">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-violet-200 to-rose-200 px-4 text-white">
       <LadingHeader />
       <LandingImage />
       <div className="text-3xl font-bold">{LANDING_TEXT.title}</div>
-      <div className="text-3xl mb-6">{LANDING_TEXT.subtitle}</div>
+      <div className="mb-6 text-3xl">{LANDING_TEXT.subtitle}</div>
       <LandingButton />
     </main>
   );
