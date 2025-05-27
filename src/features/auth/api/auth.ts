@@ -19,3 +19,9 @@ export async function loginApi(data: LoginRequest): Promise<LoginResponse> {
     body: JSON.stringify(data),
   });
 }
+
+export async function logoutApi(): Promise<void> {
+  return fetcher<void>('/auth/logout', {
+    method: 'POST',
+  });
+}
