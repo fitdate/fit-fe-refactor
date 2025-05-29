@@ -19,12 +19,12 @@ export default function GenderSelector({
     >
       {[
         {
-          value: '남자',
+          value: 'male',
           label: '남성',
           icon: <Mars />,
         },
         {
-          value: '여자',
+          value: 'female',
           label: '여성',
           icon: <Venus />,
         },
