@@ -1,4 +1,4 @@
-import { GenderSelectorProps } from '@/features/auth/auth.types';
+import { GenderSelectorProps } from '@/features/auth/types/ui.types';
 import { BaseSelector } from '@/shared/components/ui/base-selector';
 import { Mars, Venus } from 'lucide-react';
 
